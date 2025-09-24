@@ -45,271 +45,143 @@
   <link rel="icon" type="image/webp" sizes="512x512" href="/favicon/android-chrome-512x512.webp" />
   <link rel="manifest" href="/favicon/site.webmanifest" />
 </head>
-    <body>
-    <main>
-      <header class="hero-section">
-        <div class="hero-container">
-          <div class="hero-content">
-            <h1>
-              Curso de aperfeiçoamento<br />
-              <span>Em <span class="titulo_verde">Avaliação Psicologica</span></span>
-            </h1>
-            <div class="hours-highlight">[180H]</div>
-            <p class="description">
-              Estudo objetivo, sem aulas cansativas, com certificado válido em
-              todo o Brasil.
-            </p>
-            <p class="details">
-              Dê o próximo passo na sua carreira com um curso de aperfeiçoamento
-              direto ao ponto. Material exclusivo + avaliação online =
-              certificado rápido e reconhecido como curso livre.
-            </p>
-            <a href="#offer-section" class="cta-button">Clique e adquira seu material</a>
+<body>
+  <main>
+
+    <!-- HERO -->
+    <header class="hero-section">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1>
+            {{TITULO_PRINCIPAL}}<br />
+            <span>Em <span class="titulo_verde">{{AREA_DO_CURSO}}</span></span>
+          </h1>
+          <div class="hours-highlight">[{{CARGA_HORARIA}}]</div>
+          <p class="description">{{SUBTITULO}}</p>
+          <p class="details">{{DETALHES_DO_CURSO}}</p>
+          <a href="#offer-section" class="cta-button">{{TEXTO_BOTAO_HERO}}</a>
+        </div>
+        <figure class="hero-image-wrapper">
+          <div class="image-frame">
+            <img src="{{URL_IMAGEM_HERO}}" alt="{{ALT_IMAGEM_HERO}}" class="main-image" fetchpriority="high" />
           </div>
-          <figure class="hero-image-wrapper">
-            <div class="image-frame">
-              <img
-                src="img/FOTO - hero.webp"
-                alt="Especialista em Psicologia"
-                class="main-image"
-                fetchpriority="high"
-              />
+        </figure>
+      </div>
+    </header>
+
+    <!-- VÍDEO -->
+    <section class="video-section">
+      <div class="video-container">
+        <div class="video-placeholder">
+          <iframe src="{{URL_VIDEO_YOUTUBE}}" title="Apresentação" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+        <div class="video-content">
+          <h2>{{TITULO_VIDEO}}</h2>
+          <p class="video-description">{{DESCRICAO_VIDEO}}</p>
+          <a href="#offer-section" class="video-cta-button">{{TEXTO_BOTAO_VIDEO}}</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PÚBLICO -->
+    <section class="audience-section">
+      <div class="audience-title-container">
+        <h2>PARA <span class="letra-verde">QUEM</span> É O PRODUTO</h2>
+        <div class="scroll-down-icon">
+          <img src="img/seta.webp" loading="lazy" alt="Rolar para baixo" />
+        </div>
+      </div>
+      <div class="audience-content-container">
+        <h3>{{CHAMADA_PUBLICO}}</h3>
+        <ul class="card-grid">
+          <!-- Repetir item conforme necessário -->
+          <li class="card">
+            <div class="card-icon">
+              <img src="img/check.webp" loading="lazy" alt="Ícone de check" />
             </div>
-          </figure>
+            <p>{{ITEM_PUBLICO}}</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- MOTIVOS -->
+    <section class="why-buy-section">
+      <div class="why-buy-container">
+        <h2>POR QUE COMPRAR</h2>
+        <div class="reasons-grid">
+          <!-- Repetir motivo -->
+          <article class="reason-card">
+            <div class="reason-number">{{NUMERO}}</div>
+            <p>{{MOTIVO}}</p>
+          </article>
         </div>
-      </header>
+      </div>
+    </section>
 
-      <section class="video-section">
-        <div class="video-container">
-          <div class="video-placeholder">
-            <iframe src="https://www.youtube.com/embed/fLCI_FJyduI" 
-              title="YouTube video player" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              allowfullscreen>
-            </iframe>
-</div>
-          <div class="video-content">
-            <h2>
-              <span class="gray-title"
-                >SEM <span class="green-text">VÍDEO AULAS</span></span
-              ><br />
-              <span class="green-text">CANSATIVAS</span>
-              <span class="gray-text">OU</span><br />
-              <span class="gray-text">AULAS PRESENCIAIS</span>
-            </h2>
-            <p class="video-description">
-              Nosso método é prático e feito<br />
-              para quem tem pouco tempo.
-            </p>
-            <a href="#offer-section" class="video-cta-button">Ver como funciona</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="audience-section">
-        <div class="audience-title-container">
-          <h2>PARA <span class="letra-verde">QUEM</span> É O PRODUTO</h2>
-          <div class="scroll-down-icon">
-            <img src="img/seta.webp" loading="lazy" alt="Rolar para baixo" />
-          </div>
-        </div>
-
-        <div class="audience-content-container">
-          <h3>
-            É para quem quer dominar
-            <span class="highlight-green"><br />as principais </span>estratégias
-          </h3>
-
-          <ul class="card-grid">
-            <li class="card">
-              <div class="card-icon">
-                <img src="img/check.webp" loading="lazy" alt="Ícone de check" />
-              </div>
-              <p>
-                Terapeuta TRG que busca aprimorar prática clínica com base em evidências.
-              </p>
-            </li>
-            <li class="card">
-              <div class="card-icon">
-                <img src="img/check.webp" loading="lazy" alt="Ícone de check" />
-              </div>
-              <p>
-                Terapeutas experientes que desejam atualização em psicologia aplicada ao ensino.
-              </p>
-            </li>
-            <li class="card">
-              <div class="card-icon">
-                <img src="img/check.webp" loading="lazy" alt="Ícone de check" />
-              </div>
-              <p>
-                Estudante de psicologia procura aprofundar conhecimentos antes da especialização.
-              </p>
-            </li>
-            <li class="card">
-              <div class="card-icon">
-                <img src="img/check.webp" loading="lazy" alt="Ícone de check" />
-              </div>
-              <p>
-                Psicólogo clínico quer ampliar atuação para avaliação psicológica em hospitais.
-              </p>
-            </li>
-            <li class="card">
-              <div class="card-icon">
-                <img src="img/check.webp" loading="lazy" alt="Ícone de check" />
-              </div>
-              <p>
-                Educador interessado em estratégias cognitivas para melhorar aprendizagem escolar.
-              </p>
-            </li>
-            <li class="card">
-              <div class="card-icon">
-                <img src="img/check.webp" loading="lazy" alt="Ícone de check" />
-              </div>
-              <p>
-              Psicopedagogo busca ferramentas psicológicas para apoiar crianças com TDAH.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="why-buy-section">
-        <div class="why-buy-container">
-          <h2>POR QUE COMPRAR O PRODUTO</h2>
-
-          <div class="reasons-grid">
-            <article class="reason-card">
-              <div class="reason-number">1</div>
-              <p>
-                Aprofunde sua prática clínica com conhecimentos sólidos em psicologia aplicada.
-              </p>
-            </article>
-
-            <article class="reason-card">
-              <div class="reason-number">2</div>
-              <p>
-                Ganhe diferencial competitivo no mercado ao dominar avaliações psicológicas.
-              </p>
-            </article>
-
-            <article class="reason-card">
-              <div class="reason-number">3</div>
-              <p>
-                Tenha acesso a conteúdos objetivos e estruturados elaborados por equipe especializada.
-              </p>
-            </article>
-
-            <article class="reason-card">
-              <div class="reason-number">4</div>
-              <p>
-                Amplie oportunidades profissionais em clínicas, escolas e instituições de saúde.
-              </p>
+    <!-- DEPOIMENTOS -->
+    <section class="testimonial-section">
+      <h2>O QUE FALAM DO PRODUTO</h2>
+      <div class="swiper testimonial-swiper">
+        <div class="swiper-wrapper">
+          <!-- Repetir depoimento -->
+          <div class="swiper-slide">
+            <article class="testimonial-card">
+              <p class="testimonial-text">"{{DEPOIMENTO}}"</p>
+              <footer class="testimonial-author">- {{AUTOR}}</footer>
             </article>
           </div>
         </div>
-      </section>
-      <section class="testimonial-section">
-        <h2>O QUE ESTÃO FALANDO DO PRODUTO</h2>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
 
-        <div class="swiper testimonial-swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <article class="testimonial-card">
-                <p class="testimonial-text">
-                  "Esta formação me deu um importante diferencial profissional, tornando meu currículo mais atrativo. Como resultado, conquistei novas e excelentes oportunidades em escolas e clínicas."
-                </p>
-                <footer class="testimonial-author">- Joana Silva</footer>
-              </article>
-            </div>
-
-            <div class="swiper-slide">
-              <article class="testimonial-card">
-                <p class="testimonial-text">
-                  "Preciso elogiar o excelente suporte da equipe, sempre muito atenciosos e disponíveis para tirar qualquer dúvida. Os materiais também são completos e muito bem elaborados."  
-                </p>
-                <footer class="testimonial-author">- Marcos Andrade</footer>
-              </article>
-            </div>
-
-            <div class="swiper-slide">
-              <article class="testimonial-card">
-                <p class="testimonial-text">
-                  "Este curso foi um divisor de águas que ampliou minha atuação clínica. Hoje, sinto que tenho a base necessária para aplicar avaliações psicológicas com total segurança."
-                </p>
-                <footer class="testimonial-author">- Carolina Mendes</footer>
-              </article>
-            </div>
-
-            <div class="swiper-slide">
-              <article class="testimonial-card">
-                <p class="testimonial-text">
-                  "Excelente a clareza dos conteúdos. O mais incrivel foi conseguir aplicar as novas técnicas com meus pacientes já na segunda semana. Estou muito satisfeito com o material."</p>
-                <footer class="testimonial-author">- Rafael Costa</footer>
-              </article>
-            </div>
-          </div>
-
-          <div class="swiper-pagination"></div>
-        </div>
-      </section>
-      <section class="faq-section">
-    <div class="faq-container">
+    <!-- FAQ -->
+    <section class="faq-section">
+      <div class="faq-container">
         <div class="faq-header">
-            <h2>Perguntas<br>Frequentes</h2>
-            <p>Aqui não deixamos dúvidas, se você tiver alguma, a resposta pode estar aqui.</p>
+          <h2>Perguntas Frequentes</h2>
+          <p>{{TEXTO_FAQ}}</p>
         </div>
-
         <div class="faq-accordion">
-            <div class="faq-item">
-                <button class="faq-question">
-                    Qual é a duração do curso?
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>O curso tem uma carga horária total de 180 horas e o acesso é vitalício. Você pode estudar no seu próprio ritmo, sem pressa, e concluir quando se sentir preparado.</p>
-                </div>
+          <!-- Repetir item -->
+          <div class="faq-item">
+            <button class="faq-question">
+              {{PERGUNTA}}
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>{{RESPOSTA}}</p>
             </div>
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    O certificado é reconhecido pelo MEC?
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>Nosso certificado é válido em todo o território nacional como um curso livre de aperfeiçoamento profissional, em conformidade com a Lei nº 9.394/96. Cursos livres não necessitam de reconhecimento do MEC.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <button class="faq-question">
-                    Como funciona a avaliação?
-                    <span class="faq-icon">+</span>
-                </button>
-                <div class="faq-answer">
-                    <p>A avaliação é realizada através de um questionário online de múltipla escolha. Você pode realizar a prova quando quiser e, se não atingir a nota mínima, pode tentar novamente sem custo adicional.</p>
-                </div>
-              </section>
-              <section class="offer-section" id="offer-section">
-    <div class="offer-container">
-        <p class="offer-intro-text">Clique no <span class="darker-green-text">botão a baixo</span> e garanta o seu!</p>
-        
-        <div class="pricing-card">
-            <div class="product-logo-placeholder">
-                <img src="img//logo.webp" loading="lazy" alt="Logo do Produto" class="product-logo">
-            </div>
-            <p class="pricing-text-old">de <span class="green-price">R$497,00</span></p>
-            <p class="pricing-text-small">Faça sua inscrição agora por apenas</p>
-            <p class="pricing-value">R$97,00</p>
-             <p class="pricing-installments">ou em até <span class="black-text">2x de R$51,06</span></p>
-
-            <div class="divider"></div>
-
-            <a href="https://pay.kiwify.com.br/py7EEyb" target="_blank" class="cta-buy-button">COMPRE JÁ</a>
+          </div>
         </div>
-    </div>
-</section>
-    </main>
-    <script src="js/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
-  </body>
+      </div>
+    </section>
+
+    <!-- OFERTA -->
+    <section class="offer-section" id="offer-section">
+      <div class="offer-container">
+        <p class="offer-intro-text">{{TEXTO_CHAMADA_OFERTA}}</p>
+        <div class="pricing-card">
+          <div class="product-logo-placeholder">
+            <img src="{{URL_LOGO}}" loading="lazy" alt="Logo do Produto" class="product-logo">
+          </div>
+          <p class="pricing-text-old">de <span class="green-price">{{PRECO_ANTIGO}}</span></p>
+          <p class="pricing-text-small">{{TEXTO_PRECO}}</p>
+          <p class="pricing-value">{{PRECO_ATUAL}}</p>
+          <p class="pricing-installments">{{PRECO_PARCELADO}}</p>
+          <div class="divider"></div>
+          <a href="{{LINK_DE_COMPRA}}" target="_blank" class="cta-buy-button">{{TEXTO_BOTAO_COMPRA}}</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
 </html>
