@@ -1,0 +1,130 @@
+/* --- 11. Seção de Perguntas Frequentes (FAQ) --- */
+.faq-section {
+    background-color: #43A047; /* Mesmo verde da seção de depoimentos */
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 200px;
+    color: #ffffff;
+}
+
+.faq-container {
+    max-width: 1200px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 20px;
+    margin-right: 100px;
+    display: flex;
+    align-items: center;
+    gap: 300px;
+}
+
+/* Coluna da Esquerda (Título) */
+.faq-header {
+    flex: 1; /* Ocupa 1 parte do espaço */
+    border-left: 3px solid #B7FF9E; /* Linha vertical verde clara */
+    padding-left: 30px;
+}
+
+.faq-header h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    line-height: 1;
+    text-transform: uppercase;
+    color: #B7FF9E;
+}
+
+.faq-header p {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.1rem;
+    margin-top: 15px;
+    margin-right: 20px;
+    max-width: 400px;
+}
+
+/* Coluna da Direita (Perguntas) */
+.faq-accordion {
+    flex: 2; /* Ocupa 3 partes do espaço, sendo maior */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 15px;
+}
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    width: 100%;
+    background-color: #B7FF9E; /* Verde claro */
+    color: #43A047; /* Verde escuro */
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #d2ffc4; /* Um pouco mais claro no hover */
+}
+
+.faq-icon {
+    font-size: 1.8rem;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+}
+
+/* Estilo para quando o item estiver ativo (aberto) */
+.faq-question.active .faq-icon {
+    transform: rotate(45deg); /* Gira o '+' para formar um 'x' */
+}
+
+.faq-answer {
+    max-height: 0; /* A MÁGICA: Começa com altura 0 */
+    overflow: hidden; /* Esconde o conteúdo que transborda */
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* Animação suave */
+    font-family: 'Manrope', sans-serif;
+    line-height: 1.7;
+    padding: 0 15px;
+}
+
+.faq-answer p {
+    padding: 20px 0; /* Espaçamento interno do texto da resposta */
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+        .faq-section {
+        padding: 40px 20px; /* reduz padding lateral */
+    }
+    .faq-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px; /* reduz espaço entre colunas */
+        margin: 0 auto;
+    }
+
+    .faq-header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+        .reason-card:hover {
+        transform: none; /* desativa zoom em mobile */
+    }
+
+    .faq-header p {
+        margin: 15px auto 0 auto;
+    }
+}

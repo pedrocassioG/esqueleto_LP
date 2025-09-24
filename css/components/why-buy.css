@@ -1,0 +1,73 @@
+/* --- 9. Seção Por Que Comprar --- */
+.why-buy-section {
+    background-color: #558B2F; /* Verde escuro do seu layout */
+    padding: 80px 4%;
+    color: #ffffff;
+}
+
+.why-buy-container h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+}
+
+.reasons-grid {
+    display: grid;
+    /* Cria colunas que se ajustam automaticamente ao tamanho da tela */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px; /* Espaçamento entre os cards */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.reason-card {
+    background-color: #e1eaf0; /* Fundo cinza-azulado claro */
+    color: #2c3e50; /* Cor do texto escura */
+    border-top: 15px solid #B7FF9E; /* Borda verde clara no topo */
+    border-radius: 15px;
+    padding: 50px 25px 25px 25px; /* Mais padding no topo para o número */
+    position: relative; /* Essencial para posicionar o número */
+    
+    /* A MÁGICA DO EFEITO SUAVE */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+.reason-card:hover {
+    transform: scale(1.20); /* Aumenta o tamanho do card em 5% */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Sombra opcional para dar profundidade */
+    cursor: pointer;
+}
+
+.reason-number {
+    position: absolute;
+    top: -25px; /* Puxa o círculo para cima, metade para fora */
+    left: 25px; /* Distância da esquerda */
+    
+    /* Estilo do Círculo */
+    width: 50px;
+    height: 50px;
+    background-color: #B7FF9E; /* Verde claro */
+    color: #558B2F; /* Texto do número em verde escuro */
+    border-radius: 50%; /* Deixa o elemento redondo */
+    
+    /* Centraliza o número dentro do círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Estilo da Fonte */
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.reason-card p {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 500;
+}

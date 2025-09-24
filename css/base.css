@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    /* Adicionei uma cor de fundo base para evitar "flashes" brancos entre as seções */
+    background-color: #f0f0f0; 
+}
+
+html {
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,69 @@
+/* --- 10. Seção de Prova Social (Depoimentos) --- */
+.testimonial-section {
+    background-color: #ffffff; /* Fundo branco */
+    padding: 80px 4%;
+    text-align: center;
+    overflow: hidden; /* Importante para o carrossel não vazar */
+}
+
+.testimonial-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    color: #43A047; /* Verde escuro */
+    text-transform: uppercase;
+    margin-bottom: 60px;
+}
+
+/* Container do Carrossel */
+.testimonial-swiper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 50px; /* Espaço para as bolinhas de paginação */
+}
+
+.testimonial-card {
+    background-color: #e3f2fd; /* Azul bem claro */
+    border-radius: 20px;
+    padding: 30px;
+    height: 100%; /* Garante que todos os cards tenham a mesma altura */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+    /* Efeito de zoom suave */
+    transition: transform 0.3s ease;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+.testimonial-card:hover {
+    transform: scale(1.08); /* Aumenta o tamanho em 8% */
+    cursor: pointer;
+    z-index: 10;
+    position: relative;
+}
+
+.testimonial-text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #37474F;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.testimonial-author {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #43A047;
+}
+
+/* Estilo das bolinhas de paginação */
+.swiper-pagination-bullet {
+    background-color: #BDBDBD; /* Cor da bolinha inativa */
+    width: 12px;
+    height: 12px;
+    opacity: 0.8;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #43A047; /* Cor da bolinha ativa (verde) */
+}

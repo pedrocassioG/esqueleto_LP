@@ -1,0 +1,169 @@
+/* --- 2. Estilos da Seção Principal (Hero) --- */
+.hero-section {
+    background-color: #72d3e0;
+    color: #ffffff;
+    padding: 40px 4%; 
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    width: 100%;
+    gap: 40px;
+}
+
+/* --- 3. Conteúdo da Esquerda (Textos e Botão) --- */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    flex: 1;
+    max-width: 600px;
+}
+
+/* AJUSTE 1: Estilos do h1 e h2 foram combinados aqui */
+.hero-content h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem; /* Estilo da primeira linha (antigo h1) */
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 20px; /* Margem do antigo h2 foi movida para cá */
+}
+
+/* NOVO: Estilo para a segunda linha do título, que agora é um span */
+.hero-content h1 span {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem; /* Estilo do antigo h2 */
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #000000;
+}
+/* A regra para .hero-content h2 foi removida pois não existe mais no HTML */
+
+/* Agora esta regra é a mais específica e vai funcionar */
+.hero-content h1 .titulo_verde {
+    color: #2e5900;
+}
+.hours-highlight {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 13rem;
+    font-weight: 900;
+    color: #66fdff;
+    line-height: 0.8;
+    margin-bottom: 35px;
+    word-break: keep-all;
+    white-space: nowrap;
+}
+
+.hero-content .description {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.95rem;
+    padding-top: 2rem;
+    font-weight: 700;
+    line-height: 1.6; 
+    text-align: justify;
+    color: #2e5900;
+    
+}
+
+.hero-content .details {
+    font-family: 'Manrope', sans-serif;
+    padding-top: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    color: #000000;
+    text-align: justify;
+    text-align-last: justify;
+
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #b4d69a; 
+    color: #2e5900; 
+    padding: 15px 40px;
+    border-radius: 50px; 
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    font-family: 'Manrope', sans-serif;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- 4. Conteúdo da Direita (Imagem e Logo) --- */
+.hero-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+}
+
+.image-frame {
+    position: relative;
+    border-radius: 25px;
+    padding: 20px;
+}
+/* Este é o código CORRIGIDO */
+.hero-image-wrapper .main-image {
+    max-width: 100%;
+    width: 100%; /* Garante que a imagem preencha o contêiner */
+    height: 700px; /* MANTÉM a altura grande que você quer no desktop */
+    display: block; /* Apenas corrigindo o 'flex' para 'block' */
+    object-fit: cover; /* MUITO IMPORTANTE: Impede a distorção da imagem */
+}
+/* --- 5. Responsividade (Seção Hero) --- */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .hero-content {
+        order: 2;
+        max-width: 100%;
+        align-items: center;
+        text-align: center;       
+    }
+
+    .hero-content .description, .hero-content .details {
+        text-align: center;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .hero-image-wrapper {
+        order: 1;
+        margin-bottom: 30px;
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .hero-image-wrapper .main-image {
+        height: auto; /* Isso faz a mágica acontecer no celular! */
+    }
+    .hours-highlight {
+        font-size: clamp(8rem, 25vw, 10rem);
+    }
+
+    .hero-content .description,
+    .hero-content .details {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
