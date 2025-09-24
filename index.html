@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>{{TITULO_DA_LANDING}}</title>
+  <meta name="description" content="{{META_DESCRICAO}}" />
+  <meta name="keywords" content="{{META_KEYWORDS}}" />
+  <meta name="author" content="{{NOME_DO_AUTOR_OU_EMPRESA}}" />
+  <link rel="canonical" href="{{URL_SITE}}" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{URL_SITE}}" />
+  <meta property="og:title" content="{{TITULO_DA_LANDING}}" />
+  <meta property="og:description" content="{{META_DESCRICAO}}" />
+  <meta property="og:image" content="{{URL_IMAGEM_PREVIEW}}" />
+  <meta property="og:site_name" content="{{NOME_DO_SITE}}" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{TITULO_DA_LANDING}}" />
+  <meta name="twitter:description" content="{{META_DESCRICAO}}" />
+  <meta name="twitter:image" content="{{URL_IMAGEM_PREVIEW}}" />
+
+  <!-- Fonts -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;800&display=optional" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;800&display=optional" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;800&display=optional"></noscript>
+
+  <!-- CSS -->
+  <link rel="preload" href="css/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/swiper-bundle.min.css"></noscript>
+  <link rel="preload" href="/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/style.css"></noscript>
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+  <link rel="icon" type="image/webp" sizes="16x16" href="/favicon/favicon-16x16.webp" />
+  <link rel="icon" type="image/webp" sizes="32x32" href="/favicon/favicon-32x32.webp" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.webp" />
+  <link rel="icon" type="image/webp" sizes="192x192" href="/favicon/android-chrome-192x192.webp" />
+  <link rel="icon" type="image/webp" sizes="512x512" href="/favicon/android-chrome-512x512.webp" />
+  <link rel="manifest" href="/favicon/site.webmanifest" />
+</head>
+<body>
+  <main>
+
+    <!-- HERO -->
+    <header class="hero-section">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1>
+            {{TITULO_PRINCIPAL}}<br />
+            <span>Em <span class="titulo_verde">{{AREA_DO_CURSO}}</span></span>
+          </h1>
+          <div class="hours-highlight">[{{CARGA_HORARIA}}]</div>
+          <p class="description">{{SUBTITULO}}</p>
+          <p class="details">{{DETALHES_DO_CURSO}}</p>
+          <a href="#offer-section" class="cta-button">{{TEXTO_BOTAO_HERO}}</a>
+        </div>
+        <figure class="hero-image-wrapper">
+          <div class="image-frame">
+            <img src="{{URL_IMAGEM_HERO}}" alt="{{ALT_IMAGEM_HERO}}" class="main-image" fetchpriority="high" />
+          </div>
+        </figure>
+      </div>
+    </header>
+
+    <!-- VÍDEO -->
+    <section class="video-section">
+      <div class="video-container">
+        <div class="video-placeholder">
+          <iframe src="{{URL_VIDEO_YOUTUBE}}" title="Apresentação" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+        <div class="video-content">
+          <h2>{{TITULO_VIDEO}}</h2>
+          <p class="video-description">{{DESCRICAO_VIDEO}}</p>
+          <a href="#offer-section" class="video-cta-button">{{TEXTO_BOTAO_VIDEO}}</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PÚBLICO -->
+    <section class="audience-section">
+      <div class="audience-title-container">
+        <h2>PARA <span class="letra-verde">QUEM</span> É O PRODUTO</h2>
+        <div class="scroll-down-icon">
+          <img src="img/seta.webp" loading="lazy" alt="Rolar para baixo" />
+        </div>
+      </div>
+      <div class="audience-content-container">
+        <h3>{{CHAMADA_PUBLICO}}</h3>
+        <ul class="card-grid">
+          <!-- Repetir item conforme necessário -->
+          <li class="card">
+            <div class="card-icon">
+              <img src="img/check.webp" loading="lazy" alt="Ícone de check" />
+            </div>
+            <p>{{ITEM_PUBLICO}}</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- MOTIVOS -->
+    <section class="why-buy-section">
+      <div class="why-buy-container">
+        <h2>POR QUE COMPRAR</h2>
+        <div class="reasons-grid">
+          <!-- Repetir motivo -->
+          <article class="reason-card">
+            <div class="reason-number">{{NUMERO}}</div>
+            <p>{{MOTIVO}}</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="testimonial-section">
+      <h2>O QUE FALAM DO PRODUTO</h2>
+      <div class="swiper testimonial-swiper">
+        <div class="swiper-wrapper">
+          <!-- Repetir depoimento -->
+          <div class="swiper-slide">
+            <article class="testimonial-card">
+              <p class="testimonial-text">"{{DEPOIMENTO}}"</p>
+              <footer class="testimonial-author">- {{AUTOR}}</footer>
+            </article>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <div class="faq-container">
+        <div class="faq-header">
+          <h2>Perguntas Frequentes</h2>
+          <p>{{TEXTO_FAQ}}</p>
+        </div>
+        <div class="faq-accordion">
+          <!-- Repetir item -->
+          <div class="faq-item">
+            <button class="faq-question">
+              {{PERGUNTA}}
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>{{RESPOSTA}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OFERTA -->
+    <section class="offer-section" id="offer-section">
+      <div class="offer-container">
+        <p class="offer-intro-text">{{TEXTO_CHAMADA_OFERTA}}</p>
+        <div class="pricing-card">
+          <div class="product-logo-placeholder">
+            <img src="{{URL_LOGO}}" loading="lazy" alt="Logo do Produto" class="product-logo">
+          </div>
+          <p class="pricing-text-old">de <span class="green-price">{{PRECO_ANTIGO}}</span></p>
+          <p class="pricing-text-small">{{TEXTO_PRECO}}</p>
+          <p class="pricing-value">{{PRECO_ATUAL}}</p>
+          <p class="pricing-installments">{{PRECO_PARCELADO}}</p>
+          <div class="divider"></div>
+          <a href="{{LINK_DE_COMPRA}}" target="_blank" class="cta-buy-button">{{TEXTO_BOTAO_COMPRA}}</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
